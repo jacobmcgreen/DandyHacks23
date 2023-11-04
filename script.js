@@ -1,4 +1,4 @@
-document.getElementById('planner-form').addEventListener('submit', function(event) {
+document.getElementById('workout-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
     // Get user input
