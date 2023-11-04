@@ -1,5 +1,11 @@
+/* Font */
+@font-face {
+    font-family: "Quicksand";
+    src: url(Quicksand-Regular.ttf);
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Quicksand";
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;

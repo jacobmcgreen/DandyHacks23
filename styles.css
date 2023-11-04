@@ -8,7 +8,7 @@
 body {
     display: flex;
     font-family: "Quicksand";
-    background-image: url(/images/musclegym.gif);
+    background-image: url(/images/basketball.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -33,12 +33,6 @@ body {
 
 /* Heading */
 h1 {
-    color: #333;
-    text-align: center;
-}
-
-/* Heading */
-h2 {
     color: #333;
     text-align: center;
 }
@@ -101,19 +95,31 @@ button:hover {
     text-align: center;
 }
 
-
-
-.dropdown-content { 
-    width: 200px;
+/* Sidebar Content */
+.sidebar-content {
+    padding: 20px; /* Add padding to the content */
 }
 
-.dropdown-content a {
-    padding: 15px;
-    text-decoration: none;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value for transparency */
-
+/* Text Content */
+.infotext {
+    font-size: 15px;
+    margin: 0; /* Remove top margin to reduce spacing */
 }
+
+/* Heading Style */
+.sidebar-content h2 {
+    color: #333;
+    font-size: 20px;
+    margin: 0; /* Remove margin for the heading to be flush with the top */
+}
+/* Heading Style */
+.sidebar-content h3 {
+    color: #333;
+    font-size: 20px;
+    margin: 3px; /* Remove margin for the heading to be flush with the top */
+}
+
+
 
 
 
