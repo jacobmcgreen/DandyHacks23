@@ -21,29 +21,47 @@ document.getElementById('workout-form').addEventListener('submit', function(e) {
         'Full Body': ['Squats', 'Deadlifts', 'Bench Press', 'Pull-Ups', 'Shoulder Press', 'Barbell Rows', 'Planks'],
         'Upper Body': ['Bench Press', 'Shoulder Press', 'Tricep Dip', 'Pull-Up', 'Barbell Row', 'Bicep Curl'],
         'Lower Body': ['Squat', 'Leg Press', 'Deadlift', 'Calf Raise', 'Leg Curl'],
-        'Push': ['Bench Press', 'Shoulder Press', 'Tricep Dip', 'i'],
-        'Pull': ['Pull-Up', 'Barbell Row', 'Deadlift'],
-        'Legs': ['Squat', 'Leg Press', 'Calf Raise'],
-        'Core': ['Plank', 'Russian Twists', 'Leg Raises'],
+        'Push': ['Bench Press', 'Shoulder Press', 'Tricep Dip', 'Incline Bench', 'Chest Flies', 'Lateral Raises'],
+        'Pull': ['Pull-Up', 'Barbell Row', 'Deadlift', 'Lat Row', 'Reverse Flies'],
+        'Legs': ['Squat', 'Leg Press', 'Calf Raise', ' Leg Extensions', 'Laying Hamstring Curls', 'Seated Hamstring Curls','Romanian Deadlift', 'Bulgarian Spli-Squat'],
+        'Core': ['Plank', 'Russian Twists', 'Leg Raises', 'Crunches'],
         'Cardio': ['Running', 'Cycling', 'Jump Rope']
     };
 
     // Function to generate the workout plan
     function generateWorkoutPlan(days, time) {
-        let plan = '<div class="grid-container">';
-        const split = workoutSplits[days] || ['Full Body']; // Default to full body if days are not in the predefined splits
+    let plan = '<div class="grid-container">';
+    const split = workoutSplits[days] || ['Full Body']; // Default to full body if days are not in the predefined splits
 
-        split.forEach((workoutType, index) => {
-            plan += `<div class="grid-item"><h3>Day ${index + 1}: ${workoutType} Workout</h3><ul>`;
-            exercises[workoutType].forEach(exercise => {
-                plan += `<li>${exercise} - ${Math.floor(time / exercises[workoutType].length)} minutes</li>`;
-            });
-            plan += '</ul></div>';
-        });
-
-        plan += '</div>';
-        return plan;
+    // Determine the number of exercises based on the time available
+    let numExercises;
+    if (time >= 120) {
+        numExercises = 8; 
+    } else if (time >= 60) {
+        numExercises = 6;
+    } else if (time >= 30) {
+        numExercises = 4;
+    } else {
+        numExercises = 3; 
     }
+
+    // Calculate the total number of sets and sets per exercise
+    const totalSets = Math.floor(time / 5); 
+    const setsPerExercise = Math.ceil(totalSets / numExercises); 
+
+    split.forEach((workoutType, index) => {
+        plan += `<div class="grid-item"><h3>Day ${index + 1}: ${workoutType} Workout</h3><ul>`;
+        // Get the subset of exercises based on the number of exercises determined by time
+        const selectedExercises = exercises[workoutType].slice(0, numExercises);
+        selectedExercises.forEach(exercise => {
+            plan += `<li>${exercise} - ${setsPerExercise} sets (6-10 Reps)</li>`;
+        });
+        plan += '</ul></div>';
+    });
+
+    plan += '</div>';
+    return plan;
+}
 
     // Generate the workout plan
     const plan = generateWorkoutPlan(days, time);
