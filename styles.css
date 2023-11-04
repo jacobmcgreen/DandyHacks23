@@ -37,6 +37,12 @@ h1 {
     text-align: center;
 }
 
+/* Heading */
+h2 {
+    color: #333;
+    text-align: center;
+}
+
 /* Form Styles */
 form {
     margin-bottom: 20px;
@@ -81,4 +87,34 @@ button:hover {
 
 #result {
     text-align: center;
-  }
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
+.dropdown-content { 
+    width: 200px;
+}
+
+.dropdown-content a {
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value for transparency */
+
+}
+
+
+
+
