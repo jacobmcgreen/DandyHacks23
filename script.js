@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
         // Collect form data
         const gender = document.getElementById("gender").value;
         const fitnessGoals = document.getElementById("goal").value;
+        const age = parseFloat(document.getElementById("age").value);
         const weight = parseFloat(document.getElementById("weight").value);
+        const height = parseFloat(document.getElementById("height").value);
         const experience = document.getElementById("fitness-level").value;
         // const daysPerWeek = parseInt(document.getElementById("days-per-week").value);
 
         // Calculate data
-        console.log(calculateCalorieIntake)
+        console.log(calculateCalorieIntake(gender,weight, height, age,fitnessGoals, experience))
         
 
         // Reset the form
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // TDEE = 1.55 × BMR if you have a moderately active lifestyle (moderate exercise 3-5 days per week) -
 // TDEE = 1.725 × BMR if you have a very active lifestyle (heavy exercise 6-7 days per week) -
 // TDEE = 1.9 × BMR if you have an extremely active lifestyle (strenuous training 2 times a day)
-function calculateCalorieIntake(gender, weight, height, age, experience, fitnessGoals) {
+function calculateCalorieIntake(gender, weight, height, age, fitnessGoals, experience) {
     let BMR = 0;
     if(gender == "Male") {
         BMR = 66 + (6.23 * weight) + (12.7 * height) - (6.8 * age)
