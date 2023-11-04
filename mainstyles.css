@@ -1,0 +1,11 @@
+#main-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.button-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

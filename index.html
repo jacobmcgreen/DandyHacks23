@@ -3,75 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout and Diet Planner</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Main Page - GymMate+</title>
+    <link rel="stylesheet" href="mainsstyle.css"> 
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Information</h2>
-        <div id="mySidebar" class="sidebar-content">
-            <div id="creators" class="creators-container">
-                <h3>Contributors</h3>
-                <p><a href="#">Andy Feng Chen</a></p>
-                <p><a href="#">Jacob Mcgreen</a></p>
-                <p><a href="#">Jackson Pan</a></p>
-            </div>
-            <div id="infotext">
-                <h3>Our Goals</h3>
-                Our project is all about sharing our passion for fitness with everyone. 
-                We provide ready-made workout plans and calorie advice for those new to fitness or those who want a helping hand. 
-                Whether you're just starting or already on your fitness journey, we've got you covered with our expertly crafted plans.
-            </div>
+    <div id="main-container">
+        <h1>Welcome to the Workout and Diet Planner</h1>
+        <p>Select an option below to get started:</p>
+        <div class="button-container">
+            <!-- Button to redirect to the Calorie Counter -->
+            <button id="calorie-counter-button">Calorie Counter</button>
+            <!-- Button to redirect to the Workout Planner -->
+            <button id="workout-planner-button">Workout Planner</button>
         </div>
     </div>
-    <div id="app">
-        <button id="plan-button" class="top-right-button" onclick="goToPlanPage()">Plan</button>
-        <button id="home-button" class="top-right-button" onclick="goToPlanPage()">Home</button>
-        <h1>Diet Planner</h1>
-        <form id="workout-form">
-
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
-                <option value="Select">Select</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
-
-            <label for="goal">Your Goal:</label>
-            <select id="goal" name="goal">
-                <option value="Select">Select</option>
-                <option value="lose_weight">Lose Weight</option>
-                <option value="gain_weight">Gain Muscle</option>
-                <option value="maintain">Maintain</option>
-            </select>
-            
-            <label for="fitness-level">Activity Level:</label>
-            <select id="fitness-level" name="fitness-level">
-                <option value="Select">Select</option>
-                <option value="BMR">Basal Metabolic Rate (BMR)</option>
-                <option value="SED">Sedentary: Little or no exercise</option>
-                <option value="LIG">Light: Moderate Exercise 1-3 times/week</option>
-                <option value="MOD">Moderate: Exercise 4-5 times/week</option>
-                <option value="ACT">Active: Daily Moderatevexercise or intense exercise 3-4 times/week</option>
-                <option value="VAA">Very Active: Intense exercise 6-7 times/week</option>
-                <option value="EAA">Extra Active: Very intense exercise daily, or physical job</option>
-            </select>
-            
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" min="10" max="100">
-            
-            <label for="weight">Weight (lb):</label>
-            <input type="number" id="weight" name="weight">
-            
-            <label for="height">Height (in):</label>
-            <input type="number" id="height" name="height">
-            
-            <button type="submit">Get Calories</button>
-        </form>
-        
-        <div id="result">
-        </div>
-    </div>
+    <script src="main.js"></script> 
 </body>
 </html>
