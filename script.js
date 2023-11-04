@@ -60,3 +60,11 @@ function calculateCalorieIntake(gender, weight, height, age, fitnessGoals, fitne
   
   return maintenanceCalories;
 }
+
+function goToPlanPage() {
+    window.location.href = "plan.html";
+}
+
+function goToAnotherPage() {
+    window.location.href = "another_page.html";
+}

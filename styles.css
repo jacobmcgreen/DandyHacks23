@@ -130,3 +130,27 @@ button:hover {
 .resultValue {
     color: orange;
 }
+
+.top-right-button {
+    position: absolute;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #f6691e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.top-right-button:hover {
+    background-color: #f1805b;
+}
+
+#plan-button {
+    right: 10px;
+    margin-bottom: 10px; 
+}
+
+#home-button {
+    right: 80px; /* Adjust the positioning as needed */
+}
