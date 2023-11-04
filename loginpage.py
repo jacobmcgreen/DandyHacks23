@@ -82,8 +82,8 @@ root = tk.Tk()
 root.title("Login Page")
 
 # Set the window size and position it in the center of the screen
-window_width = 400
-window_height = 200
+window_width = 800
+window_height = 400
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 x_position = (screen_width - window_width) // 2
@@ -95,23 +95,23 @@ frame_login = tk.Frame(root)
 frame_login.pack(padx=10, pady=10)
 
 # Username field
-label_username = tk.Label(frame_login, text="Username:")
+label_username = tk.Label(frame_login, text="Username:", font=("Courier New", 12))
 label_username.grid(row=0, column=0, sticky="e")
-entry_username = tk.Entry(frame_login)
+entry_username = tk.Entry(frame_login, font=("Courier New", 12))
 entry_username.grid(row=0, column=1)
 
 # Password field
-label_password = tk.Label(frame_login, text="Password:")
+label_password = tk.Label(frame_login, text="Password:", font=("Courier New", 12))
 label_password.grid(row=1, column=0, sticky="e")
 entry_password = tk.Entry(frame_login, show="*")
 entry_password.grid(row=1, column=1)
 
 # Login button
-button_login = tk.Button(frame_login, text="Login", command=attempt_login)
+button_login = tk.Button(frame_login, text="Login", command=attempt_login, font=("Courier New", 12))
 button_login.grid(row=2, column=0, columnspan=2, pady=5)
 
 # Add User button
-button_add_user = tk.Button(frame_login, text="Add User", command=show_add_user_prompt)
+button_add_user = tk.Button(frame_login, text="Add User", command=show_add_user_prompt, font=("Courier New", 12))
 button_add_user.grid(row=3, column=0, columnspan=2, pady=5)
 
 # Set the focus on the username entry
