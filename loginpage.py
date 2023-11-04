@@ -4,7 +4,9 @@ import subprocess
 
 # Hardcoded credentials for demonstration purposes
 USER_DATABASE = {
-    'username': 'password123'
+    'andy': 'password',
+    'jacob': 'password',
+    'jackson': 'password',
 }
 
 def check_login(username, password):
