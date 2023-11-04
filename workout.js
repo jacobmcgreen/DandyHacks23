@@ -51,13 +51,20 @@ document.getElementById('workout-form').addEventListener('submit', function(e) {
 
     split.forEach((workoutType, index) => {
         plan += `<div class="grid-item"><h3>Day ${index + 1}: ${workoutType} Workout</h3><ul>`;
-        // Get the subset of exercises based on the number of exercises determined by time
+        // Get the exercises based on the number of exercises determined by time
         const selectedExercises = exercises[workoutType].slice(0, numExercises);
         selectedExercises.forEach(exercise => {
-            plan += `<li>${exercise} - ${setsPerExercise} sets (6-10 Reps)</li>`;
+            if (workoutType === 'Cardio') {
+                // Calculate the time per cardio exercise
+                const timePerExercise = Math.floor(time / selectedExercises.length);
+                plan += `<li>${exercise} - ${timePerExercise} minutes</li>`;
+            } else {
+                plan += `<li>${exercise} - ${setsPerExercise} sets</li>`;
+            }
         });
         plan += '</ul></div>';
     });
+
 
     plan += '</div>';
     return plan;
