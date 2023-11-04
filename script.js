@@ -1,3 +1,53 @@
+document.getElementById('workout-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const days = parseInt(document.getElementById('days').value);
+    const time = parseInt(document.getElementById('time').value);
+    const planDiv = document.getElementById('workout-plan');
+    
+    // Define different workout splits including 1 and 2 days
+    const workoutSplits = {
+        1: ['Full Body'],
+        2: ['Upper Body', 'Lower Body'],
+        3: ['Push', 'Pull', 'Legs'],
+        4: ['Upper Body', 'Lower Body', 'Push', 'Pull'],
+        5: ['Push', 'Pull', 'Legs', 'Core', 'Cardio'],
+        6: ['Push', 'Pull', 'Legs', 'Push', 'Pull', 'Legs'],
+        7: ['Push', 'Pull', 'Legs', 'Cardio', 'Push', 'Pull', 'Legs']
+    };
+
+    // Define exercises for each type of workout including full body
+    const exercises = {
+        'Full Body': ['Squats', 'Deadlifts', 'Bench Press', 'Pull-Ups', 'Shoulder Press', 'Barbell Rows', 'Planks'],
+        'Upper Body': ['Bench Press', 'Shoulder Press', 'Tricep Dip', 'Pull-Up', 'Barbell Row', 'Bicep Curl'],
+        'Lower Body': ['Squat', 'Leg Press', 'Deadlift', 'Calf Raise', 'Leg Curl'],
+        'Push': ['Bench Press', 'Shoulder Press', 'Tricep Dip'],
+        'Pull': ['Pull-Up', 'Barbell Row', 'Deadlift'],
+        'Legs': ['Squat', 'Leg Press', 'Calf Raise'],
+        'Core': ['Plank', 'Russian Twists', 'Leg Raises'],
+        'Cardio': ['Running', 'Cycling', 'Jump Rope']
+    };
+
+    // Function to generate the workout plan
+    function generateWorkoutPlan(days, time) {
+        let plan = '';
+        const split = workoutSplits[days] || ['Full Body']; // Default to full body if days are not in the predefined splits
+
+        split.forEach((workoutType, index) => {
+            plan += `<h3>Day ${index + 1}: ${workoutType} Workout</h3><ul>`;
+            exercises[workoutType].forEach(exercise => {
+                plan += `<li>${exercise} - ${Math.floor(time / exercises[workoutType].length)} minutes</li>`;
+            });
+            plan += '</ul>';
+        });
+
+        return plan;
+    }
+
+    // Generate and display the workout plan
+    planDiv.innerHTML = generateWorkoutPlan(days, time);
+});
+
 document.getElementById('planner-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -12,26 +62,11 @@ document.getElementById('planner-form').addEventListener('submit', function(even
     var bmr = 10 * weight + 6.25 * height - 5 * age + 5; // Mifflin-St Jeor Equation
     var calorieNeeds = bmr * (fitnessLevel === 'beginner' ? 1.2 : fitnessLevel === 'intermediate' ? 1.55 : 1.725);
 
-<<<<<<< HEAD
     // Adjust calorie needs based on goal
     calorieNeeds += (goal === 'lose_weight' ? -500 : goal === 'gain_muscle' ? 500 : 0);
 
     // Generate workout plan - this would be more complex in a real app
     var workoutPlan = `Workout Plan: ${fitnessLevel === 'beginner' ? '30 minutes walking' : fitnessLevel === 'intermediate' ? '60 minutes mixed cardio and strength' : '90 minutes advanced training'}`;
-=======
-        // Collect form data
-        const gender = document.getElementById("gender").value;
-        const fitnessGoals = document.getElementById("goal").value;
-        const age = parseFloat(document.getElementById("age").value);
-        const weight = parseFloat(document.getElementById("weight").value);
-        const height = parseFloat(document.getElementById("height").value);
-        const experience = document.getElementById("fitness-level").value;
-        // const daysPerWeek = parseInt(document.getElementById("days-per-week").value);
-
-        // Calculate data
-        console.log(calculateCalorieIntake(gender,weight, height, age,fitnessGoals, experience))
-        
->>>>>>> acf35dcd415ee4eb1e2a5789b816728a3fc6ea49
 
     // Display the result
     document.getElementById('plan-result').innerHTML = `
@@ -86,3 +121,5 @@ function calculateThreeWorkouts(fitnessGoals, experience, daysPerWeek) {
 function returnWorkout(calculateCalorieIntake,calculateThreeWorkouts) {
 
 }
+
+
