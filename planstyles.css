@@ -8,6 +8,7 @@ body {
     display: flex;
     font-family: "Quicksand";
     background-image: url(/images/musclegym.gif);
+    color: whitesmoke;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,7 +23,7 @@ body {
     width: 50%; /* Adjust the width to your desired percentage */
     height: 40%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(68, 67, 67, 0.9); /* Adjust the alpha value for transparency */
     padding: 20px;
     border-radius: 8px;
     -webkit-box-shadow: 0px 0px 105px 45px rgba(255, 255, 255, 0.1);
@@ -32,9 +33,9 @@ body {
 
 /* Heading */
 h1 {
-    color: #333;
+    color: whitesmoke;
     text-align: center;
-}
+}   
 
 /* Form Styles */
 form {
@@ -51,16 +52,18 @@ form select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ddd;
+    background-color: #333; /* Set the background color to a dark shade */
+    color: whitesmoke;
+    border: 1px solid #fff; /* Add a white border */
     border-radius: 8px;
-    box-sizing: border-box; /* So that width includes padding */
+    box-sizing: border-box;
 }
 
 /* Button Styles */
 button {
     font-family: "Quicksand";
-    background-color: #507791;
-    color: white;
+    background-color: #355364;
+    color: whitesmoke;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -70,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: #355364;
+    background-color: #507791;;
 }
 
 /* Plan Result */
