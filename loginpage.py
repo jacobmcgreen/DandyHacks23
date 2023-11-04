@@ -92,7 +92,7 @@ root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
 
 # Create a frame for the login components
 frame_login = tk.Frame(root)
-frame_login.pack(padx=10, pady=10)
+frame_login.pack(padx=130, pady=130)
 
 # Username field
 label_username = tk.Label(frame_login, text="Username:", font=("Courier New", 12))
