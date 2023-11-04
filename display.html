@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Workout Plan</title>
+<link rel="stylesheet" href="grid.css">
+</head>
+<body>
+<div class="container">
+    <h1>Your Workout Plan</h1>
+    <div id="workout-plan">
+    </div>
+</div>
+<script>
+    // Load the workout plan from localStorage and display it
+    window.onload = function() {
+        const plan = localStorage.getItem('workoutPlan');
+        if (plan) {
+            document.getElementById('workout-plan').innerHTML = plan;
+        } else {
+            document.getElementById('workout-plan').innerHTML = '<p>No workout plan found. Please generate one.</p>';
+        }
+    };
+</script>
+</body>
+</html>

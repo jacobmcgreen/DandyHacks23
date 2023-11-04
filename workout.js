@@ -21,7 +21,7 @@ document.getElementById('workout-form').addEventListener('submit', function(e) {
         'Full Body': ['Squats', 'Deadlifts', 'Bench Press', 'Pull-Ups', 'Shoulder Press', 'Barbell Rows', 'Planks'],
         'Upper Body': ['Bench Press', 'Shoulder Press', 'Tricep Dip', 'Pull-Up', 'Barbell Row', 'Bicep Curl'],
         'Lower Body': ['Squat', 'Leg Press', 'Deadlift', 'Calf Raise', 'Leg Curl'],
-        'Push': ['Bench Press', 'Shoulder Press', 'Tricep Dip'],
+        'Push': ['Bench Press', 'Shoulder Press', 'Tricep Dip', 'i'],
         'Pull': ['Pull-Up', 'Barbell Row', 'Deadlift'],
         'Legs': ['Squat', 'Leg Press', 'Calf Raise'],
         'Core': ['Plank', 'Russian Twists', 'Leg Raises'],
