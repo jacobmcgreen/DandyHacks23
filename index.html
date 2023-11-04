@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Workout and Diet Planner</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout and Diet Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-<div id="app">
-    <h1>Workout and Diet Planner</h1>
-    <form id="planner-form">
-        <label for="goal">Your Goal:</label>
-        <select id="goal" name="goal">
-            <option value="lose_weight">Lose Weight</option>
-            <option value="gain_muscle">Gain Muscle</option>
-            <option value="maintain">Maintain</option>
-        </select>
+    <div id="app">
+        <h1>Workout and Diet Planner</h1>
+        <form id="planner-form">
 
-        <label for="fitness-level">Fitness Level:</label>
-        <select id="fitness-level" name="fitness-level">
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-        </select>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="Select">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="10" max="100">
-
-        <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" name="weight">
-
-        <label for="height">Height (cm):</label>
-        <input type="number" id="height" name="height">
-
-        <button type="submit">Get Plan</button>
-    </form>
-
-    <div id="plan-result">
-        <!-- The workout and diet plan will be displayed here -->
+            <label for="goal">Your Goal:</label>
+            <select id="goal" name="goal">
+                <option value="Select">Select</option>
+                <option value="lose_weight">Lose Weight</option>
+                <option value="gain_muscle">Gain Muscle</option>
+                <option value="maintain">Maintain</option>
+            </select>
+            
+            <label for="fitness-level">Fitness Level:</label>
+            <select id="fitness-level" name="fitness-level">
+                <option value="Select">Select</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="10" max="100">
+            
+            <label for="weight">Weight (lb):</label>
+            <input type="number" id="weight" name="weight">
+            
+            <label for="height">Height (in):</label>
+            <input type="number" id="height" name="height">
+            
+            <button type="submit">Get Plan</button>
+        </form>
+        
+        <div id="plan-result">
+            <!-- The workout and diet plan will be displayed here -->
+        </div>
     </div>
-</div>
-<script src="script.js"></script>
 </body>
 </html>
