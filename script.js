@@ -44,6 +44,17 @@ function calculateCalorieIntake(gender, weight, height, age, experience, fitness
     if(experience == "advanced") {
         TDEE = 1.725 * BMR;
     }
+    let maintenanceCalories = 0;
+    if(fitnessGoals == "maintain") {
+        maintenanceCalories = TDEE;
+    }
+    if(fitnessGoals == "lose_weight") {
+        maintenanceCalories = TDEE-500;
+    }
+    if(fitnessGoals == "gain_weight") {
+        maintenanceCalories = TDEE+(.10*TDEE);
+    }
+    return maintenanceCalories;
 }
 
 function calculateThreeWorkouts(fitnessGoals, experience, daysPerWeek) {
