@@ -18,9 +18,10 @@ body {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    background: white;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value for transparency */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 h1 {
@@ -43,13 +44,13 @@ form select {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     box-sizing: border-box; /* So that width includes padding */
 }
 
 button {
     font-family: "Quicksand";
-    background-color: #9dd4f8;
+    background-color: #79c9fd;
     color: white;
     padding: 10px 20px;
     border: none;
