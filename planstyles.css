@@ -80,3 +80,14 @@ button:hover {
 #plan-result {
     margin-top: 20px;
 }
+
+/* Initial style for the element */
+#workout-plan {
+    opacity: 0; 
+    transition: opacity 2s ease-in-out;
+}
+
+/* Style for the element when it's visible */
+#workout-plan.visible {
+    opacity: 1;
+}
