@@ -17,7 +17,6 @@ def run_main_script():
     """Run the main.py script."""
     subprocess.run(["/usr/local/bin/python3", "main.py"])
 
-
 def attempt_login():
     """Attempt to log in with the information provided in the entry fields."""
     username = entry_username.get()
@@ -33,6 +32,15 @@ def attempt_login():
 # Create the main window
 root = tk.Tk()
 root.title("Login Page")
+
+# Set the window size and position it in the center of the screen
+window_width = 400
+window_height = 200
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+x_position = (screen_width - window_width) // 2
+y_position = (screen_height - window_height) // 2
+root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
 
 # Create a frame for the login components
 frame_login = tk.Frame(root)
