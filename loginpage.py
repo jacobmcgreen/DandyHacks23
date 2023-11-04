@@ -3,10 +3,6 @@ from tkinter import messagebox
 import subprocess
 import os
 
-# Create the main window
-root = tk.Tk()
-root.title("Login Page")
-
 # File to store credentials
 USER_DATABASE_FILE = 'user_database.txt'
 
@@ -58,6 +54,15 @@ def show_add_user_prompt():
     add_user_window = tk.Toplevel(root)
     add_user_window.title("Add User")
 
+    # Calculate the position to center the "Add User" window
+    add_user_window_width = 300
+    add_user_window_height = 150
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    x_position = (screen_width - add_user_window_width) // 2
+    y_position = (screen_height - add_user_window_height) // 2
+    add_user_window.geometry(f"{add_user_window_width}x{add_user_window_height}+{x_position}+{y_position}")
+
     # Username field
     tk.Label(add_user_window, text="New Username:").grid(row=0, column=0)
     new_username_entry = tk.Entry(add_user_window)
@@ -81,6 +86,9 @@ def show_add_user_prompt():
     # Focus on the username entry
     new_username_entry.focus_set()
 
+# Create the main window
+root = tk.Tk()
+root.title("Login Page")
 
 # Set the window size and position it in the center of the screen
 window_width = 800
