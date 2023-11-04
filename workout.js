@@ -59,7 +59,7 @@ document.getElementById('workout-form').addEventListener('submit', function(e) {
                 const timePerExercise = Math.floor(time / selectedExercises.length);
                 plan += `<li>${exercise} - ${timePerExercise} minutes</li>`;
             } else {
-                plan += `<li>${exercise} - ${setsPerExercise} sets</li>`;
+                plan += `<li>${exercise} - ${setsPerExercise} sets (6-10 Reps)</li>`;
             }
         });
         plan += '</ul></div>';
