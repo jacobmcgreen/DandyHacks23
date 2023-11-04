@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       // Display the result in an HTML element
       const resultElement = document.getElementById("result");
-      resultElement.innerHTML = `You should eat ${resultValue} calories a day to reach your goal!`;
+      resultElement.innerHTML = `You should eat <span style="color: orange">${resultValue}</span> calories a day to reach your goal!`;
 
       // Reset the form
       form.reset();
