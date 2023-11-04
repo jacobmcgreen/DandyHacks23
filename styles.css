@@ -1,9 +1,12 @@
+/* Font */
 @font-face {
     font-family: "Quicksand";
     src: url(Quicksand-Regular.ttf);
 }
 
+/* Body */
 body {
+    display: flex;
     font-family: "Quicksand";
     background-image: url(/images/musclegym.gif);
     background-size: cover;
@@ -13,22 +16,28 @@ body {
     padding: 20px;
 }
 
+/* App Container */
 #app {
     display: flex;
+    flex:3;
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value for transparency */
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(255,255,255,0.1);
+-moz-box-shadow: 0px 0px 105px 45px rgba(255,255,255,0.1);
+box-shadow: 0px 0px 105px 45px rgba(255,255,255,0.1);
 }
 
+/* Heading */
 h1 {
     color: #333;
     text-align: center;
 }
 
+/* Form Styles */
 form {
     margin-bottom: 20px;
 }
@@ -48,9 +57,10 @@ form select {
     box-sizing: border-box; /* So that width includes padding */
 }
 
+/* Button Styles */
 button {
     font-family: "Quicksand";
-    background-color: #79c9fd;
+    background-color: #507791;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -61,10 +71,14 @@ button {
 }
 
 button:hover {
-    background-color: #45b8fb;
+    background-color: #355364;
 }
 
+/* Plan Result */
 #plan-result {
     margin-top: 20px;
 }
 
+#sidebarbutton {
+    
+}
