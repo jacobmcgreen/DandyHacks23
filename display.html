@@ -7,21 +7,44 @@
 <link rel="stylesheet" href="grid.css">
 </head>
 <body>
+
 <div class="container">
     <h1>Your Workout Plan</h1>
     <div id="workout-plan">
     </div>
 </div>
+<div class="loader-overlay">
+    <div class="loader">
+        <div class="circular-loader">
+            <img src="/images/gymload.gif" alt="Loading">
+        </div>
+    </div>
+</div>
 <script>
-    // Load the workout plan from localStorage and display it
-    window.onload = function() {
-        const plan = localStorage.getItem('workoutPlan');
-        if (plan) {
-            document.getElementById('workout-plan').innerHTML = plan;
-        } else {
-            document.getElementById('workout-plan').innerHTML = '<p>No workout plan found. Please generate one.</p>';
-        }
-    };
+// Load the workout plan from localStorage and display it
+var loader = document.getElementById("loader-overlay");
+
+var wait3seconds = function() {
+    // Function to hide the loader
+    function hideLoader() {
+        document.querySelector('.loader-overlay').style.display = 'none';
+    }
+    setTimeout(hideLoader, 800); // Wait for 3 seconds before hiding the loader
+};
+
+window.onload = function() {
+    wait3seconds(); // Start the countdown to hide the loader
+    const plan = localStorage.getItem('workoutPlan');
+    if (plan) {
+        document.getElementById('workout-plan').innerHTML = plan;
+    } else {
+        document.getElementById('workout-plan').innerHTML = '<p>No workout plan found. Please generate one.</p>';
+    }
+};
+         // Function to hide the loader
+    function hideLoader() {
+        document.querySelector('.loader-overlay').style.display = 'none';
+    }
 </script>
 </body>
 </html>
