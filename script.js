@@ -1,22 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("workout-form");
+document.getElementById('planner-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get user input
+    var goal = document.getElementById('goal').value;
+    var fitnessLevel = document.getElementById('fitness-level').value;
+    var age = document.getElementById('age').value;
+    var weight = document.getElementById('weight').value;
+    var height = document.getElementById('height').value;
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the form from submitting
+    // Calculate calorie needs - this is a simplified formula
+    var bmr = 10 * weight + 6.25 * height - 5 * age + 5; // Mifflin-St Jeor Equation
+    var calorieNeeds = bmr * (fitnessLevel === 'beginner' ? 1.2 : fitnessLevel === 'intermediate' ? 1.55 : 1.725);
 
-        // Collect form data
-        const fitnessGoals = document.getElementById("fitness-goals").value;
-        const weight = parseFloat(document.getElementById("weight").value);
-        const experience = document.querySelector('input[name="experience"]:checked').value;
-        const daysPerWeek = parseInt(document.getElementById("days-per-week").value);
+    // Adjust calorie needs based on goal
+    calorieNeeds += (goal === 'lose_weight' ? -500 : goal === 'gain_muscle' ? 500 : 0);
 
-        // You can do something with the data here, e.g., display it or send it to a server
-        console.log("Fitness Goals:", fitnessGoals);
-        console.log("Weight (kg):", weight);
-        console.log("Experience Level:", experience);
-        console.log("Days per Week:", daysPerWeek);
+    // Generate workout plan - this would be more complex in a real app
+    var workoutPlan = `Workout Plan: ${fitnessLevel === 'beginner' ? '30 minutes walking' : fitnessLevel === 'intermediate' ? '60 minutes mixed cardio and strength' : '90 minutes advanced training'}`;
 
-        // Reset the form
-        form.reset();
-    });
+    // Display the result
+    document.getElementById('plan-result').innerHTML = `
+        <h2>Your Personalized Plan</h2>
+        <p>Calorie Needs: ${calorieNeeds.toFixed(2)} kcal/day</p>
+        <p>${workoutPlan}</p>
+    `;
 });
