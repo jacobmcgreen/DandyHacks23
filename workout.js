@@ -80,3 +80,11 @@ document.getElementById('workout-form').addEventListener('submit', function(e) {
     window.location.href = 'display.html';
 
 });
+
+function goToPlanPage() {
+    window.location.href = "calorie.html";
+}
+
+function goToIndexPage() {
+    window.location.href = "index.html";
+}

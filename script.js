@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const resultElement = document.getElementById("result");
       resultElement.innerHTML = `You should eat <span style="color: orange">${resultValue}</span> calories a day to reach your goal!`;
 
-      // Reset the form
-      form.reset();
   });
 });
 
