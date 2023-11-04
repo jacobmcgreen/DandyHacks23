@@ -7,7 +7,7 @@
 body {
     display: flex;
     font-family: "Quicksand";
-    background-image: url(/images/musclegym.gif);
+    background-image: url(./images/musclegym.gif);
     color: whitesmoke;
     background-size: cover;
     background-repeat: no-repeat;
