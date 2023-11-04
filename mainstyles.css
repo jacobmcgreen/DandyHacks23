@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     font-family: "Quicksand";
     color: whitesmoke;
-    background-image: url(./images/home.gif);
+    background-image: url(images/home.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;    
