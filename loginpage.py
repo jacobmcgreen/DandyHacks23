@@ -15,7 +15,8 @@ def check_login(username, password):
 
 def run_main_script():
     """Run the main.py script."""
-    subprocess.run(["python", "main.py"])
+    subprocess.run(["/usr/local/bin/python3", "main.py"])
+
 
 def attempt_login():
     """Attempt to log in with the information provided in the entry fields."""
