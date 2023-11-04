@@ -1,0 +1,13 @@
+/* Font */
+@font-face {
+    font-family: "Quicksand";
+    src: url(Quicksand-Regular.ttf);
+}
+
+/* Body */
+body {
+    display: flex;
+    font-family: "Quicksand";
+    margin: 0;
+    padding: 20px;
+}
