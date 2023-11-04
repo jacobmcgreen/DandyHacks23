@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workout Plan Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Workout Plan Generator</h1>
+    <form id="workout-form">
+        <label for="days">How many days do you want to work out per week?</label>
+        <input type="number" id="days" name="days" min="1" max="7" required>
+        
+        <label for="time">How much time do you have for each workout? (in minutes)</label>
+        <input type="number" id="time" name="time" min="30" max="120" required>
+        
+        <button type="submit">Generate Plan</button>
+    </form>
+    <div id="workout-plan"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
