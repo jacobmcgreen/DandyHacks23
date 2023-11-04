@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Workout Planner</title>
+</head>
+<body>
+    <h1>Workout Planner</h1>
+    <form id="workout-form">
+        <label for="fitness-goals">Fitness Goals:</label>
+        <select id="fitness-goals" name="fitness-goals" required>
+            <option value="weight-loss">Weight Loss</option>
+            <option value="muscle-gain">Muscle Gain</option>
+            <option value="general-fitness">General Fitness</option>
+        </select>
+
+        <br>
+
+        <label for="weight">Weight (in kg):</label>
+        <input type="number" id="weight" name="weight" required>
+
+        <br>
+
+        <label for="experience">Experience Level:</label>
+        <input type="radio" id="beginner" name="experience" value="beginner" required>
+        <label for="beginner">Beginner</label>
+        <input type="radio" id="intermediate" name="experience" value="intermediate">
+        <label for="intermediate">Intermediate</label>
+        <input type="radio" id="advanced" name="experience" value="advanced">
+        <label for="advanced">Advanced</label>
+
+        <br>
+
+        <label for="days-per-week">Days per Week:</label>
+        <input type="number" id="days-per-week" name="days-per-week" required>
+
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

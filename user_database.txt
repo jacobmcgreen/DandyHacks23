@@ -1,3 +1,0 @@
-andy:password
-jacob:balls
-jackson:password
