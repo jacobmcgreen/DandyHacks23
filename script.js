@@ -1,4 +1,4 @@
-document.getElementById('planner-form').addEventListener('submit', function(event) {
+document.getElementById('workout-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
     // Get user input
@@ -22,13 +22,31 @@ document.getElementById('planner-form').addEventListener('submit', function(even
         // const daysPerWeek = parseInt(document.getElementById("days-per-week").value);
 
         // Calculate data
-        console.log(calculateCalorieIntake)
         console.log(calculateCalorieIntake(gender,weight, height, age,fitnessGoals, experience))
-        window.location.href = "plan.html"
+        
 
-
-        // Reset the form
-        form.reset();
-    });
+    // Display the result
+    document.getElementById('plan-result').innerHTML = `
+        <h2>Your Personalized Plan</h2>
+        <p>Calorie Needs: ${calorieNeeds.toFixed(2)} kcal/day</p>
+        <p>${workoutPlan}</p>
+    `;
 });
 
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
