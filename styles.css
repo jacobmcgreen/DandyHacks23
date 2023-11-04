@@ -1,11 +1,17 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url(Quicksand-Regular.ttf);
+}
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Quicksand";
+    background-color: #fcfcfc;
     margin: 0;
     padding: 20px;
 }
 
 #app {
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
     background: white;
@@ -15,6 +21,7 @@ body {
 
 h1 {
     color: #333;
+    text-align: center;
 }
 
 form {
@@ -53,3 +60,4 @@ button:hover {
 #plan-result {
     margin-top: 20px;
 }
+

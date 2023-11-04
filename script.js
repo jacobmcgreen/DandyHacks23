@@ -6,12 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Collect form data
         const gender = document.getElementById("gender").value;
-        const fitnessGoals = document.getElementById("fitness-goals").value;
+        const fitnessGoals = document.getElementById("goal").value;
         const weight = parseFloat(document.getElementById("weight").value);
-        const experience = document.querySelector('input[name="experience"]:checked').value;
-        const daysPerWeek = parseInt(document.getElementById("days-per-week").value);
+        const experience = document.getElementById("fitness-level").value;
+        // const daysPerWeek = parseInt(document.getElementById("days-per-week").value);
 
         // Calculate data
+        console.log(calculateCalorieIntake)
         
 
         // Reset the form
