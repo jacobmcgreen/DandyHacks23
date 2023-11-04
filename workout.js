@@ -30,20 +30,28 @@ document.getElementById('workout-form').addEventListener('submit', function(e) {
 
     // Function to generate the workout plan
     function generateWorkoutPlan(days, time) {
-        let plan = '';
+        let plan = '<div class="grid-container">';
         const split = workoutSplits[days] || ['Full Body']; // Default to full body if days are not in the predefined splits
 
         split.forEach((workoutType, index) => {
-            plan += `<h3>Day ${index + 1}: ${workoutType} Workout</h3><ul>`;
+            plan += `<div class="grid-item"><h3>Day ${index + 1}: ${workoutType} Workout</h3><ul>`;
             exercises[workoutType].forEach(exercise => {
                 plan += `<li>${exercise} - ${Math.floor(time / exercises[workoutType].length)} minutes</li>`;
             });
-            plan += '</ul>';
+            plan += '</ul></div>';
         });
 
+        plan += '</div>';
         return plan;
     }
 
-    // Generate and display the workout plan
-    planDiv.innerHTML = generateWorkoutPlan(days, time);
+    // Generate the workout plan
+    const plan = generateWorkoutPlan(days, time);
+
+    // Store the plan
+    localStorage.setItem('workoutPlan', plan);
+
+    // Redirect to the display page
+    window.location.href = 'display.html';
+
 });
