@@ -1,0 +1,101 @@
+/* Font */
+@font-face {
+    font-family: "Quicksand";
+    src: url(Quicksand-Regular.ttf);
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Quicksand";
+    color: whitesmoke;
+    background-image: url(./images/home.gif);
+    background-color: rgba(68, 67, 67, 0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+}
+
+#main-container {
+    width: 50%; /* Adjust the width to your desired percentage */
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: rgba(68, 67, 67, 0.9); /* Adjust the alpha value for transparency */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.button-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.info-container {
+    border-radius: 8px;
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgba(68, 67, 67, 0.9);
+    text-align: center;
+}
+
+.info-content {
+    width: 50%;
+    height: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#infotext {
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Heading Style for sidebar content */
+.info-content h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.creators-container {
+    display: flex;
+    align-items: center;
+}
+
+.creators-container a {
+    color: #76cdff;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-left: 12px;
+}
+
+h1,
+h2,
+p,
+.button-container {
+    text-align: center;
+}
+
+
+.button-container button {
+    background-color: rgba(68, 67, 67, 0.9);
+    color: whitesmoke;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.info-container h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+}

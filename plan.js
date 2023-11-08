@@ -3,7 +3,6 @@ document.getElementById('workout-form').addEventListener('submit', function(e) {
     
     const days = parseInt(document.getElementById('days').value);
     const time = parseInt(document.getElementById('time').value);
-    const planDiv = document.getElementById('workout-plan');
     
     // Define different workout splits including 1 and 2 days
     const workoutSplits = {
@@ -81,7 +80,7 @@ document.getElementById('workout-form').addEventListener('submit', function(e) {
 
 });
 
-function goToPlanPage() {
+function goToCaloriesPage() {
     window.location.href = "calorie.html";
 }
 

@@ -31,9 +31,7 @@ function calculateCalorieIntake(gender, weight, height, age, fitnessGoals, fitne
   }
   
   let TDEE = 0;
-  if (fitnesslevel === "BMR") { 
-      TDEE = 1 * BMR;
-  } else if (fitnesslevel === "SED") {
+ if (fitnesslevel === "SED") {
       TDEE = 1.2 * BMR;
   } else if (fitnesslevel === "LIG") {
       TDEE = 1.375 * BMR;
@@ -43,7 +41,7 @@ function calculateCalorieIntake(gender, weight, height, age, fitnessGoals, fitne
     TDEE = 1.55 * BMR;
   } else if (fitnesslevel === "VAA") {
     TDEE = 1.725 * BMR;
-  }else if (fitnesslevel === "EAA") {
+  } else if (fitnesslevel === "EAA") {
     TDEE = 1.9 * BMR;
   }
   
@@ -55,7 +53,6 @@ function calculateCalorieIntake(gender, weight, height, age, fitnessGoals, fitne
   } else if (fitnessGoals === "gain_weight") {
       maintenanceCalories = TDEE + (0.10 * TDEE);
   }
-  
   return maintenanceCalories;
 }
 

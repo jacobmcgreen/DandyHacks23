@@ -4,11 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Workout Plan Generator</title>
-        <link rel="stylesheet" href="planstyles.css">
+        <link rel="stylesheet" href="plan.css">
+        <script src="plan.js" defer></script>
     </head>
     <body>
         <div id="container">
-            <button id="plan-button" class="top-right-button" onclick="goToPlanPage()">Calories</button>
+            <button id="plan-button" class="top-right-button" onclick="goToCaloriesPage()">Calories</button>
             <button id="home-button" class="top-right-button" onclick="goToIndexPage()">Home</button>
             <h1>Workout Plan Generator</h1>
             <form id="workout-form">
@@ -20,8 +21,8 @@
                 
                 <button type="submit">Generate Plan</button>
             </form>
-            <div id="workout-plan"></div>
+            <div id="workout-plan">
+            </div>
         </div>
-        <script src="workout.js"></script>
     </body>
 </html>
