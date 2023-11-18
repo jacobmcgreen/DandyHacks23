@@ -7,8 +7,8 @@
 body {
     display: flex;
     font-family: "Quicksand";
-    background-image: url(./images/musclegym.gif);
     color: whitesmoke;
+    background-image: url(./images/musclegym.gif);
     background-color: rgba(68, 67, 67, 0.9);
     background-size: cover;
     background-repeat: no-repeat;
